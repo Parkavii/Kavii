@@ -1,0 +1,20 @@
+
+
+
+
+
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+
+  <form class="form-inline">
+    <button (click)="HClick()" class="btn  my-2 my-sm-0" type="submit">Home</button>
+    <button (click)="RClick()" class="btn  my-2 my-sm-0" type="submit">Register</button>
+    <button (click)="LClick()" class="btn  my-2 my-sm-0" type="submit">Login</button>
+    <button (click)="DClick()" class="btn  my-2 my-sm-0" type="submit">Dashboard</button>
+    <button (click)="OClick()" class="btn  my-2 my-sm-0" type="submit">Observable</button>
+  </form>
+</nav>
+
+<h1  appHighlight>Welcome to ***{{title}}***</h1>
+
+
+<router-outlet></router-outlet>
