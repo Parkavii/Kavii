@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-registeration',
   templateUrl: './registeration.component.html',
@@ -13,7 +13,8 @@ export class RegisterationComponent implements OnInit {
   registerForm : FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+    private route:Router) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -40,6 +41,7 @@ export class RegisterationComponent implements OnInit {
 
     // display form values on success
     alert('SUCCESS');
+    this.route.navigate(['login']);
   }
 
   onReset() {
